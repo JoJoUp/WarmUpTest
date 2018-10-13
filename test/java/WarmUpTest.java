@@ -6,14 +6,21 @@ public class WarmUpTest {
 
     @Test
     public void multiplication() {
-        int a, b, c;
+        int a = 0;
+        int b = 0;
 
-        a = -100 + (int) (Math.random() * 100);
-        b = -100 + (int) (Math.random() * 100);
-
-        c = a * b;
-
-
-        assertEquals(WarmUpTestt.multiplication(a, b), c);
+        assertEquals(WarmUpTestt.multiplication(a, b), a * b);
+        a = -5;
+        b = -10;
+        assertEquals(WarmUpTestt.multiplication(a, b), a * b);
+        a = -5;
+        b = 10;
+        assertEquals(WarmUpTestt.multiplication(a, b), a * b);
+        a = 5;
+        b = -10;
+        assertEquals(WarmUpTestt.multiplication(a, b), a * b);
+        a = 5;
+        b = 10;
+        assertEquals(WarmUpTestt.multiplication(a, b), a * b);
     }
 }

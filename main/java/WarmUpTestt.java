@@ -14,7 +14,7 @@ public class WarmUpTestt {
     }
 
     /**
-     *
+     *  Метод умножения без знака умножения
      * @param operand1
      * @param operand2
      * @return результат
@@ -24,17 +24,14 @@ public class WarmUpTestt {
         int result = 0;
         int max;
         if (operand1 == 0 || operand2 == 0) return 0;
-        if (operand1 > operand2) {
-            min = operand2;
-            max = operand1;
-        } else {
-            min = operand1;
-            max = operand2;
+        while ((operand1 < 0 && operand2 < 0) || operand2 < 0) {
+            operand2++;
+            result-=operand1;
         }
-        do {
-            min--;
-            result += max;
-        } while (min >= 1);
+        while ((operand1>0||operand1<0)&&operand2>0){
+            operand2--;
+            result+=operand1;
+        }
         return result;
     }
 
